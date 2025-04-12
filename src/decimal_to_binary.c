@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 void decimal_to_binary(num) {
-	int index = 0; //Initialisation
-	int bin[32]; //32-bit binary number (up to)
+	int index = 0;
+	int bin[32]; //array for 32 bit binary number
 
 	if (num == 0) {
 		printf("0");
@@ -11,7 +11,7 @@ void decimal_to_binary(num) {
 		while (num > 0) {
 			bin[index] = num % 2;
 			num = num / 2;
-			index++; //Incrementing index to move to the next step
+			index++;
 		}
 
 		printf("Binary output: ");
@@ -19,11 +19,11 @@ void decimal_to_binary(num) {
 			printf("%d", bin[i]);
 		}
 	}
-	printf("\n"); //Formatting done in function to save space; otherwise new line would have to be done each time the function is implemented
+	printf("\n");
 }
 
 int main() {
-	int num; //Variable declaration done outside loop so it's not declared each time the loop runs
+	int num;
 	int x = 0;
 	while (x != 1) {
 		printf("Enter a Decimal (Denary) number: ");
